@@ -27,7 +27,7 @@ function createDeck(couleurs, valeurs){
    return deck;
 };
 
-// console.log(createDeck(suits, values));
+createDeck(suits, values);
 
 
 // Level 2 : distribution and remove cards which are in hand's players
@@ -37,11 +37,11 @@ let hand = [];
 function deal(numberOfCards){
     console.log('Your two cards are:');
 
-    // display 2 results
-    for (let i = 0; i < numberOfCards; i++) {   
-        result = Math.floor(Math.random * deck[i])
-        hand.push(result);
+    for (let i = 0; i < numberOfCards; i++) {
+        let j = Math.floor(Math.random() * i);
+        hand.push(j);
     }
+
     return hand;
 };
 
