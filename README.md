@@ -17,6 +17,8 @@ Each week, our professional supervisors gives us some exercises to realize in di
 - Motus
 - Compression
 - Minesweeper Game
+- Pimp My Ride
+- Connect 4
 
 Enjoy!
 
@@ -39,5 +41,7 @@ Chaque semaine, nos encadrant.e.s nous challengent avec un exercice dans des lan
 - Motus
 - Compression
 - Démineur
+- Pimp My Ride
+- Puissance 4
 
 Belle découverte !
