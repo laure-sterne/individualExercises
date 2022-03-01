@@ -1,3 +1,5 @@
+`En français`
+
 # Compression de texte
 
 ## Introduction
@@ -142,4 +144,150 @@ Essayez votre code de compression sur d'autres textes. Attention : jusqu'à pré
 - absence de majuscule,
 - absence de nombre (qui rentrent en colision avec les références utilisées dans le dictionnaire de compression),
 - espaces ajoutés autour de certains caractère (comme autour des parenthèses `(`, `)`),
+- ...
+
+`In english`
+
+# Text compression
+
+## Introduction
+
+This exercise deals with compression, which is a process for representing a certain amount of information by using and occupying a smaller space than originally.
+
+There are several types of compression, in this exercise we will focus on compression:
+
+- **lossless**, ie the final result will not be degraded compared to the original information;
+- **by dictionary**, ie we will save space by replacing certain snippets of information with a shorter reference.
+  We will store this reference and the associated snippet in a dictionary, in order to allow us to reconstruct the original information during a decompression step.
+
+We will base ourselves on the following example text:
+
+----
+
+généralement, on utilise un texte en faux latin ( le texte ne veut rien dire, il a été modifié ), le lorem ipsum ou lipsum, qui permet donc de faire office de texte d'attente. l'avantage de le mettre en latin est que l'opérateur sait au premier coup d'oeil que la page contenant ces lignes n'est pas valide, et surtout l'attention du client n'est pas dérangée par le contenu, il demeure concentré seulement sur l'aspect graphique. ce texte a pour autre avantage d'utiliser des mots de longueur variable, essayant de simuler une occupation normale. la méthode simpliste consistant à copier-coller un court texte plusieurs fois ( « ceci est un faux-texte ceci est un faux-texte ceci est un faux-texte ceci est un faux-texte ceci est un faux-texte » ) a l'inconvénient de ne pas permettre une juste appréciation typographique du résultat final. il circule des centaines de versions différentes du lorem ipsum, mais ce texte aurait originellement été tiré de l'ouvrage de cicéron, de finibus bonorum et malorum ( liber primus ), texte populaire à cette époque, dont l'une des premières phrases est : « neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit... » ( « il n'existe personne qui aime la souffrance pour elle-même, ni qui la recherche ni qui la veuille pour ce qu'elle est... » ). expert en utilisabilité des sites web et des logiciels, jakob nielsen souligne que l'une des limites de l'utilisation du faux-texte dans la conception de sites web est que ce texte n'étant jamais lu, il ne permet pas de vérifier sa lisibilité effective. la lecture à l'écran étant plus difficile, cet aspect est pourtant essentiel. nielsen préconise donc l'utilisation de textes représentatifs plutôt que du lorem ipsum. on peut aussi faire remarquer que les formules conçues avec du faux-texte ont tendance à sous-estimer l'espace nécessaire à une titraille immédiatement intelligible, ce qui oblige les rédactions à formuler ensuite des titres simplificateurs, voire inexacts, pour ne pas dépasser l'espace imparti. contrairement à une idée répandue, le faux-texte ne donne même pas un aperçu réaliste du gris typographique, en particulier dans le cas des textes justifiés : en effet, les mots fictifs employés dans le faux-texte ne faisant évidemment pas partie des dictionnaires des logiciels de pao, les programmes de césure ne peuvent pas effectuer leur travail habituel sur de tels textes. par conséquent, l'interlettrage du faux-texte sera toujours quelque peu supérieur à ce qu'il aurait été avec un texte réel, qui présentera donc un aspect plus sombre et moins lisible que le faux-texte avec lequel le graphiste a effectué ses essais. un vrai texte pose aussi des problèmes de lisibilité spécifiques ( noms propres, numéros de téléphone, retours à la ligne fréquents, composition des citations en italiques, intertitres de plus de deux lignes ... ) qu'on n'observe jamais dans le faux-texte.
+
+----
+
+## Step 1 - Cut and reconstruct the text
+
+### Cutting
+
+We will first transform the text to make it easier to manipulate.
+
+Create a function `A` (give it the name you want, it's just to refer to it in this exercise) taking as parameter this text (or any other character string) and returns a list of words.
+
+We define a word as a set of characters, whatever they are, with the exception of spaces, which separate words from each other.
+For example, for the following text:
+
+```
+----
+qu'elle est... » ). expert en utilisabilité des
+----
+```
+
+... the list of words is: `['that she', 'is...', '»', ').', 'expert', 'in', 'usability', 'des']` .
+
+It is possible to use the `split` function, present in many languages ​​(often in the form of a method of the `String` type), or any other equivalent.
+
+### Rebuilding
+
+Also create a function `B` taking as parameter a list of words, and returning a character string composed of all the words in order, separated by a space.
+
+This function is the "inverse" of the `A` function created in the **Cutting** step: currently, without any modification of the words, it allows you to reform the original text from the result of the `A function `.
+
+
+## Step 2 - Compression with fixed dictionary
+
+We will now replace some words in the text with references.
+
+We will use the following dictionary:
+
+```
+{'texte': '1',
+ 'lorem': '2',
+ 'qui': '3',
+ 'donc': '4',
+ 'est': '5',
+ 'que': '6',
+ 'pour': '7',
+ 'ceci': '8',
+ 'faux-texte': '9',
+ 'dans': '10',
+ 'plus': '11',
+ 'avec': '12'}
+```
+Create a `C` function taking as parameters a list of words and a dictionary.
+
+For each word in the list, if the word exists in the dictionary as a key, replace it with the associated value.
+
+For example, with the previous dictionary and the list `['but', 'this', 'is', 'a', 'long', 'false-text']`, the function must return `['but', '8', '5', 'one', 'long', '9']`.
+
+You can now chain your `A`, `C` and `B` functions together to produce new text:
+
+- `A` divides the original text into a list of words,
+- `C` replaces some of these words with dictionary references,
+- `B` retrieves the list of words and reconstructs a complete text.
+
+You have just compressed the text!
+
+
+## Step 3 - Decompression
+
+The text produced in step 3 is certainly shorter, but it is not readable as it is. It is therefore necessary to go through a decompression stage: replace the references with the original words.
+
+This is the purpose of this step.
+
+We can intuitively think that the step of replacing the references by the original words is very close to what the `C` function did, and it's true!
+
+With one detail, which is that now the words we are looking for in the text are no longer the keys of the dictionary, but its values.
+
+To solve this detail, there is a simple possibility: "invert" the dictionary, for example transform `{'text': '1', 'lorem': '2'}` into `{'1': 'text' , '2': 'lorem'}`. In this case, the `C` function can be used directly: all you have to do is change the dictionary passed as an argument.
+
+It is of course possible to achieve this by keeping only one dictionary.
+
+In any case, you now have a set of functions allowing you to compress and decompress the text.
+
+Take some time to analyze the space saving of your compression. You can also add or remove words from your dictionary to assess their impact.
+
+
+## Step 4 - A Better Dictionary
+
+The proposed dictionary is far from being complete, and even if it were, perhaps it would not be suitable for all texts.
+
+So we are going to make a function to generate our own dictionary.
+
+Create a `D` function which takes a list of words as a parameter, and returns a dictionary whose keys are the words of the text, and the values ​​their number of occurrences.
+
+For example, with the list `['this', 'is', 'a', 'false-text', 'this', 'is']`, the function will return: `{'this': 2, 'is ': 2, 'one': 1, 'dummy-text': 1}`.
+
+This function allows you to see which words appear most often in the text, and if it is effective to replace them with a reference: for example, replacing the word `'un'` with the reference `'254'` n' does not result in a gain of space, but on the contrary a loss!
+
+From your observations, build a richer dictionary than the one proposed as an example, test your compression / decompression and watch the space saving.
+
+You can also automatically generate a dictionary of references from the constraints of your choice, for example *"I only want to replace words longer than 3 characters that appear at least twice"*.
+
+You need for that a function `E` which takes in parameter a dictionary of number of appearance of the words, and which returns a dictionary of reference.
+
+For example, if you only want to substitute words longer than 3 characters that appear at least 2 times, with the argument `{'with': 3, 'all': 1, 'one': 23, 'night' : 10}`, the function will return: `{'with': '1', 'night': '2'}`.
+
+You can therefore, from these constraints, filter the dictionary produced by your `D` function, then associate with each of the words kept a unique reference
+
+When you have this function, you will have a compression code adaptive to the compressed text:
+
+- `A` divides the original text into a list of words,
+- `D` analyzes this list of words to build a dictionary of the number of occurrences of words,
+- `E` uses this dictionary to produce a dictionary of references,
+- `C` replaces some of these words with references from the dictionary of references produced by `E`,
+- `B` recovers the list of words and reconstructs a complete compressed text.
+
+From there, try to change the generation constraints of your reference dictionary, to find the most efficient parameters!
+
+## Step 5 - ...
+
+Try your compression code on other texts. Attention: until now, a certain number of subtleties were not treated, because the text was simplified:
+
+- no line break,
+- absence of capital letters,
+- absence of numbers (which collide with the references used in the compression dictionary),
+- spaces added around certain characters (like around parentheses `(`, `)`),
 - ...

@@ -1,3 +1,5 @@
+`En français`
+
 # Exercice individuel
 
 ## Mastermind
@@ -30,3 +32,38 @@ Proposez une vraie interface graphique à votre utilisateur pour ce mastermind q
 
 
 Comme d'habitude, on vous demande de mettre vos solutions dans votre repo dédié.
+
+`In english`
+
+# Individual exercise
+
+## Mastermind
+
+A classic board game!
+This game is played with one player choosing a color combination and another player guessing those colors and in what order. A codemaker and a codebreaker. At each round, the codebreaker must make a proposal, the codemaker must respond by indicating the number of well-placed colors and the number of good colors but badly placed.
+I suggest you do this exercise in python.
+
+### Example :
+The secret code: [blue, red, yellow, green]
+1st round: [blue, yellow, purple, red] -> [1,2] = 1 well placed and good color and 2 badly placed but good color
+2nd: [blue, yellow, red, green] -> [2, 2]
+…
+
+### Step by step :
+Keep user interactions simple, don't try to deal with errors from the start.
+Start with only 2 colors and then you can increase the choice.
+
+## Level 1
+A simple mastermind. You enter a combination of 4 colors. There are only 4 colors in the choices offered.
+
+## Level 2
+You have to find a combination of 4 colors but there are 8 colors available.
+
+## Level 3
+This time, you will be able to play without anyone's help since it is the computer that composes the secret code to be guessed.
+
+## Level 4
+Offer a real graphical interface to your user for this mastermind which includes level 2 and 3.
+
+
+As usual, you are asked to put your solutions in your dedicated repo.

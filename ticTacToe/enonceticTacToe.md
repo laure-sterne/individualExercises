@@ -1,3 +1,5 @@
+`En français`
+
 # Exercice individuel
 
 ## Tic Tac Toe
@@ -33,3 +35,41 @@ Je vous propose un découpage des fonctionnalités de notre jeu pour celles qui 
 
 ##########################################################
 Comme d'habitude, on vous demande de mettre vos solutions dans votre repo dédié.
+
+`In english`
+
+# Individual exercise
+
+## Tic Tac Toe
+
+I don't think I need to explain the rules in detail, but good little reminder!
+Two players alternately place a circle, for one, a cross, for the other, in a grid of 3 squares by 3. The object of the game is to obtain an alignment (in line, column or diagonal) of its three signs.
+
+
+All levels are not necessarily to be done. The goal is to work on a language that you do not know in order to familiarize yourself with it.
+
+## 1
+A language you already know? JavaScript? Python?
+
+## 2
+A language that you use little but very interesting because the origin of a large number of languages, C!
+
+## 3
+In Swift! A playground on XCode for those on Mac or an online plyaground may be enough. You can even make a GUI easily on XCode with SwiftUI ;).
+
+
+### Steps :
+I offer you a breakdown of the features of our game for those who want more support:
+
+- To start, make a function that displays the game board, regardless of its state, and the pawns.
+
+- Make a function that checks if the game is won or over.
+
+- Next, we need a function that will change the state of the pawns based on user input.
+
+- Finally the game function. It will manage the interaction with the user. To know what type of pawn is what he is playing and the place he wants to give it. And of course, it will call the functions it needs for the proper functioning of the game.
+
+
+
+################################################# ########
+As usual, you are asked to put your solutions in your dedicated repo.

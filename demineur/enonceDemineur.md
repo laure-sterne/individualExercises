@@ -1,5 +1,6 @@
-# Demineur
+`En français`
 
+# Demineur
 
 ## Level 1 - The base
 
@@ -40,3 +41,46 @@ Les règles du démineur sont assez simples :
 - La case est occupée par une mine : désolé, vous avez perdu !
 - La case n'est pas occupée par une mine : la chance, vous pouvez continuer !
 - Et en plus, cette case affiche maintenant le nombre de mines dans l'ensemble des 8 cases adjacentes.
+
+`In english`
+
+# Minesweeper
+
+## Level 1 - The base
+
+To get started, you need a good grid generator.
+
+- A generator which could, from a side size `M` - or 2 sizes `(M,N)` for a rectangular grid -, generate a superb grid. Filled with 0 for example to simplify the "empty" side.
+- A generator that could, from an integer `K`, generate a grid (superb let's remember) dotted with `K` marvelous full boxes (or black, or `True`, or `X`) in an ocean of `M*NK` empty (or white, or `False`) cells.
+  These full `K` squares would be randomly distributed on the grid.
+
+Generate this grid from the command line in python.
+
+## Level 2 - Hide this grid that I cannot see
+
+But imagine, if the grid was initially neutral, and you could, one after the other, select the boxes (for example by entering their coordinates on the command line), and discover them: either full (or black, or `True`), or empty (or blank, or `False`)?
+
+It would still be devilishly intriguing!
+
+You need loop logic for this:
+
+- The grid is displayed in a certain `A` state. At the beginning, this state is "neutral": we do not know the contents of the cells.
+- The game expects an action, an order; you execute it (you enter coordinates for example, or - if you have already diversified into graphics - you click on a box, ...).
+- The game shows you the new `B` state of the grid (the `A` state plus the result of your action).
+- We start the loop again with this new state `B`.
+
+## Level 3 - Full graphix
+
+The command line is cool, but you think that being able to do the same thing, but with a graphical interface, would be even better.
+
+## Level 4 - Minesweeper
+
+You have a grid generator, it's superb. Using it to implement a good old minesweeper, even better!
+
+The rules of Minesweeper are quite simple:
+
+- The grid is generated with a known number of mines, and their locations are fixed.
+- When the grid is queried (click on a box, or fill in the coordinates of a box on the command line, ...), two possible cases:
+- The space is occupied by a mine: sorry, you lost!
+- The square is not occupied by a mine: luck, you can continue!
+- And in addition, this box now displays the number of mines in all 8 adjacent boxes.
