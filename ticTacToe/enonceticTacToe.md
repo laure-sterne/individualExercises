@@ -54,7 +54,6 @@ A language you already know? JavaScript? Python?
 ## 2
 A language that you use little but very interesting because the origin of a large number of languages, C!
 
-## 3
 In Swift! A playground on XCode for those on Mac or an online plyaground may be enough. You can even make a GUI easily on XCode with SwiftUI ;).
 
 

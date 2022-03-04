@@ -57,4 +57,11 @@ print(c(allFlights))
 
 # Step 3 : Compatibility
 
+def d(trips):
+    # 
+    
+    # 
+
+    return
+
 # To be continued...
