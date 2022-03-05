@@ -55,21 +55,13 @@ class Game:
             self.player -= 1
 
 
-# def playGameRound(self):
-#     self.show()
-#     self.placeAPawn()
-
-#     if not self.endOfTheGame():
-#         self.nextPlayer()
-#         self.playGameRound()
+    def playGameRound(self):
+        self.show()
+        self.placeAPawn()
+    
+        if not self.endOfTheGame():
+            self.nextPlayer()
+            self.playGameRound()
 
 structure = Game()
-# structure.playGameRound()
-
-# structure.show()
-# structure.placeAPawn()
-# structure.nextPlayer()
-# structure.placeAPawn()
-# structure.show()
-# structure.endOfTheGame()
-# print(structure.endOfTheGame())
+structure.playGameRound()
