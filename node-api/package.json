@@ -1,0 +1,22 @@
+{
+  "name": "node-express-api-sample",
+  "version": "1.0.0",
+  "description": "A simple node js api to be familiar with this notion",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laure-sterne/node-api-or-nothing.git"
+  },
+  "author": "laure-sterne",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/laure-sterne/node-api-or-nothing/issues"
+  },
+  "homepage": "https://github.com/laure-sterne/node-api-or-nothing#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
