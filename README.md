@@ -19,6 +19,7 @@ Each week, our professional supervisors gives us some exercises to realize in di
 - Minesweeper Game
 - Pimp My Ride
 - Connect 4
+- API Node JS
 
 Enjoy!
 
@@ -43,5 +44,6 @@ Chaque semaine, nos encadrant.e.s nous challengent avec un exercice dans des lan
 - Démineur
 - Pimp My Ride
 - Puissance 4
+- API Node JS
 
 Belle découverte !
