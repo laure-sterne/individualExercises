@@ -8,7 +8,7 @@ class Game:
         self.nbcolumns = int(nbcolumns)
         self.grid = []
         
-        colonne = 1
+        colonne = 0
 
         for l in range(0, nblines):
             ligne = [colonne for i in range(0, nbcolumns)]
@@ -26,32 +26,18 @@ class Game:
                 i[self.column] = self.player
                 print("I place my pawn with my number's player", i[self.column], "below")
                 break
-            else:
-                i + 1
-                print("Go to the next index!")
-                
+
         print(self.grid)
     
     def endOfTheGame(self): #boolean
-        for p in self.grid:
-            if p[p] & p[p+1] & p[p+2] & p[p+3] == self.joueur:
-                print(self.joueur, "has won!")
-            else:
-                print("play an another game round!")
-                
-    def nextPlayer(self):
-        if self.player == 1:
-            self.player += 1
-        else:
-            self.player -= 1
         pass
-
-
-structure = Game()
-# structure.playGameRound()
-
-structure.show()
-structure.endOfTheGame()
+                    
+    # def nextPlayer(self):
+    #     if self.player == 1:
+    #         self.player += 1
+    #     else:
+    #         self.player -= 1
+    #     pass
 
 
 # def playGameRound(self):
@@ -61,3 +47,11 @@ structure.endOfTheGame()
 #     if not self.endOfTheGame():
 #         self.nextPlayer()
 #         self.playGameRound()
+
+structure = Game()
+# structure.playGameRound()
+
+structure.show()
+structure.placeAPawn()
+structure.endOfTheGame()
+
