@@ -10,7 +10,10 @@ Tâches en parallèle via le multithreading
 
 ## Enoncé
 
-Cette exercice a pour objectif de compresser les images d'un répertoire en faisant le traitement de chaque image dans un thread afin de minimiser le temps d'exécution et maximiser l'utilisation des cores. (le répertoire ne contient que 4 images, donc on aura au plus 4 threads simultanement !). Ce traitement sera aussi l'occasion de mesurer les tailles des fichiers avant/aprés compression pour, en fin de traitement, afficher un taux de compression pour l'ensemble des fichiers (ce chiffre pourrait être le rapport des tailles de fichiers aprés / avant traitement).
+Cette exercice a pour objectif de compresser les images d'un répertoire en faisant le traitement de chaque image dans un thread afin de minimiser le temps d'exécution et maximiser l'utilisation des cores. (le répertoire ne contient que 4 images, donc on aura au plus 4 threads simultanement !). 
+
+Ce traitement sera aussi l'occasion de mesurer les tailles des fichiers avant/aprés compression pour, en fin de traitement, afficher un taux de compression pour l'ensemble des fichiers (ce chiffre pourrait être le rapport des tailles de fichiers aprés / avant traitement).
+
 Les fichiers sont disponibles dans un répertoire `IMAGES` (voir l'archive *IMAGES.tar* à downloader puis uploader vers le notebook). Les fichiers compressés seront mis dans un répertoire `COMPRESSED_IMAGES`, à créer s'il n'existe pas, par un des threads de traitement d'image.
 Penser à synchroniser les sections critiques (création du répertoire de destination, cumul des tailles de fichiers).
 
