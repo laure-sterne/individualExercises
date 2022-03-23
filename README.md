@@ -20,6 +20,8 @@ Each week, our professional supervisors gives us some exercises to realize in di
 - Pimp My Ride
 - Connect 4
 - API Node JS
+- Multithreading
+- Pokedex
 
 Enjoy!
 
@@ -45,5 +47,7 @@ Chaque semaine, nos encadrant.e.s nous challengent avec un exercice dans des lan
 - Pimp My Ride
 - Puissance 4
 - API Node JS
+- Multithreading
+- Pokedex
 
 Belle découverte !
