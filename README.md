@@ -22,6 +22,7 @@ Each week, our professional supervisors gives us some exercises to realize in di
 - API Node JS
 - Multithreading
 - Pokedex
+- Awale / Awele
 
 Enjoy!
 
@@ -49,5 +50,6 @@ Chaque semaine, nos encadrant.e.s nous challengent avec un exercice dans des lan
 - API Node JS
 - Multithreading
 - Pokedex
+- Awalé / Awélé 
 
 Belle découverte !
